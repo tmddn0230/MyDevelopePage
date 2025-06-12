@@ -7,7 +7,7 @@ export default function IntroSection() {
             {/* 왼쪽: 일러스트 이미지 */}
             <div className="w-[200px] min-w-[160px]">
                 <img
-                    src="/MyDevelopePage/images/pingu.jpg"
+                    src="/MyDevelopePage/images/Pingu.jpg"
                     alt="프로그래머 일러스트"
                     width={200}
                     height={200}

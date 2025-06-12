@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import HeaderBanner from "@/Components/HeaderBanner";
+import SideProfileCard from "@/Components/SideProfileCard";
+import IntroSection from "@/Components/IntroSection";
+import AlgorithmPost from "@/Components/AlgorithmPost";
+import PortFolioCardSection from "@/Components/PortfolioCardSection"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,17 +20,18 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
     >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
+      <HeaderBanner />
+      <main className="grid grid-cols-[280px_1fr] gap-8 px-6 py-8 w-full">
+
+        <SideProfileCard />
+        <div className="flex flex-col gap-12">
+          <IntroSection />
+          <PortFolioCardSection />
+          <AlgorithmPost />
+        </div>
+
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
@@ -63,6 +70,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <></>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

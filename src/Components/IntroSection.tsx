@@ -1,13 +1,13 @@
 'use client'
-import Image from 'next/image'
+
 
 export default function IntroSection() {
     return (
         <section className="flex flex-col sm:flex-row items-center gap-8 px-4 py-8">
             {/* 왼쪽: 일러스트 이미지 */}
             <div className="w-[200px] min-w-[160px]">
-                <Image
-                    src="/images/pingu.jpg"
+                <img
+                    src="/MyDevelopePage/images/pingu.jpg"
                     alt="프로그래머 일러스트"
                     width={200}
                     height={200}
